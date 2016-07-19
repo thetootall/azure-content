@@ -54,9 +54,10 @@ Please see Hardware and Software Requirements for hardware and software requirem
 
 - You must be using v6.0 or higher of the Azure Multi-Factor Authentication Server.
 - User Portal must be installed on an Internet-facing web server running Microsoft® Internet Information Services (IIS) 6.x, IIS 7.x or higher.
+- User Portal should be secured with a publically trusted SSL certificate.
 - When using IIS 6.x, ensure ASP.NET v2.0.50727 is installed, registered and set to Allowed.
-- Required role services when using IIS 7.x or higher include ASP.NET and IIS 6 Metabase Compatibility.
-- User Portal should be secured with an SSL certificate.
+- The Azure Multi-Factor Authentication Web Service SDK requires several role services when using IIS 7.x or higher. The following Powershell script will aid in installing the necessary role service features:<br>
+Install-Windowsfeature Web-Server, Web-WebServer, Web-Common-Http, Web-Default-Doc, Web-Dir-Browsing, Web-Http-Errors, Web-Static-Content, Web-Health, Web-Http-Logging, Web-Performance, Web-Stat-Compression, Web-Security, Web-Filtering, Web-Basic-Auth, Web-App-Dev, Web-Net-Ext45, Web-Asp-Net45, Web-ISAPI-Ext, Web-ISAPI-Filter, Web-Mgmt-Tools, Web-Mgmt-Console, Web-Mgmt-Compat, Web-Metabase, NET-Framework-45-Features, NET-Framework-45-Core, NET-Framework-45-ASPNET, NET-WCF-Services45, NET-WCF-TCP-PortSharing45
 - The Azure Multi-Factor Authentication Web Service SDK must be installed in IIS 6.x, IIS 7.x or higher on the server that the Azure Multi-Factor Authentication Server is installed on.
 - The Azure Multi-Factor Authentication Web Service SDK must be secured with an SSL certificate.
 - User Portal must be able to connect to the Azure Multi-Factor Authentication Web Service SDK over SSL.
